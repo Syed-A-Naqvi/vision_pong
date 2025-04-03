@@ -1,0 +1,4 @@
+venv-yolo/
+model_training/datasets/
+model_training/egohands_data/
+latex/

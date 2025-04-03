@@ -1,5 +1,7 @@
 # AirPaddle: Vision-Based Interactive Ball Simulation
 
+# Interactive Hand-Controlled Pong Game
+
 ## Overview
 This repository hosts an interactive, computer vision-based Pong-style game. By leveraging real-time hand tracking, you can control a virtual paddle and keep a bouncing ball from falling off the screen. The game combines hand detection techniques from OpenCV/MediaPipe with physics-based simulation to create a dynamic, engaging experience.
 
@@ -7,11 +9,12 @@ This repository hosts an interactive, computer vision-based Pong-style game. By 
 1. [Features](#features)
 2. [Technology Stack](#technology-stack)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [How It Works](#how-it-works)
-6. [Challenges and Solutions](#challenges-and-solutions)
-7. [Future Improvements](#future-improvements)
-8. [License](#license)
+4. [Directory Structure](#directory-structure)
+5. [Usage](#usage)
+6. [How It Works](#how-it-works)
+7. [Challenges and Solutions](#challenges-and-solutions)
+8. [Future Improvements](#future-improvements)
+9. [License](#license)
 
 ## Features
 - **Real-Time Hand Detection**: Uses a webcam feed to track and translate hand position.
@@ -43,6 +46,22 @@ This repository hosts an interactive, computer vision-based Pong-style game. By 
 
 > **Note**: A webcam is required for hand tracking.
 
+## Directory Structure
+Below is a sample directory structure for this repository:
+
+```
+interactive-hand-game/
+├── main.py            # Entry point of the game
+├── README.md          # Project documentation (this file)
+├── requirements.txt   # Python package requirements
+├── src/               # Source code directory for game logic
+│   ├── detection/     # Computer vision scripts
+│   ├── physics/       # Physics and collision modules
+│   └── utils/         # Utility functions and helpers
+├── assets/            # Assets like images, sounds, etc.
+└── LICENSE            # License for this project
+```
+
 ## Usage
 - **Hand in Frame**: Make sure your hand is visible to the webcam.
 - **Movement**: Move your hand left or right to position the paddle.
@@ -72,4 +91,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ---
 
-_Hand-Controlled Pong Game © 2025_
+_AirPaddle: Vision-Based Interactive Ball Simulation © 2025_
