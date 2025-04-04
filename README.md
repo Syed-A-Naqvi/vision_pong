@@ -1,4 +1,4 @@
-# AirPaddle: Vision-Based Interactive Ball Simulation
+# VisionPong: Vision-Based Interactive Ball Simulation
 
 # Interactive Hand-Controlled Pong Game
 
