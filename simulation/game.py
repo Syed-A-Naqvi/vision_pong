@@ -1,60 +1,10 @@
 import pygame
-import cv2
-from ultralytics import YOLO
 import numpy as np
-from typing import List, Tuple
 import time
-
-class HandDetector:
-    def __init__(self, model_path: str = './model_training/runs/detect/hand_detection_11n/weights/best.pt'):
-        self.model = YOLO(model_path)
-        self.cap = cv2.VideoCapture(0)
-        
-    def get_hand_position(self) -> float:
-        ret, frame = self.cap.read()
-        if not ret:
-            return 0.0
-            
-        results = self.model(frame)
-        # Placeholder for hand detection logic
-        # Will be implemented when we have the actual model
-        return 0.0
-        
-    def release(self):
-        self.cap.release()
-
-class Ball:
-    def __init__(self, x: float, y: float, velocity: Tuple[float, float]):
-        self.x = x
-        self.y = y
-        self.velocity = velocity
-        self.radius = 10
-        
-    def update(self, screen_width: int, screen_height: int) -> bool:
-        # Update position based on velocity
-        self.x += self.velocity[0]
-        self.y += self.velocity[1]
-        
-        # Handle collisions with walls
-        if self.x - self.radius <= 0 or self.x + self.radius >= screen_width:
-            self.velocity = (-self.velocity[0], self.velocity[1])
-            
-        if self.y - self.radius <= 0:
-            self.velocity = (self.velocity[0], -self.velocity[1])
-            
-        # Check if ball fell off screen
-        return self.y <= screen_height
-
-class Paddle:
-    def __init__(self, x: float, y: float, width: int, height: int):
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-        
-    def update(self, hand_x: float, screen_width: int):
-        # Update paddle position based on hand position
-        self.x = max(0, min(screen_width - self.width, hand_x - self.width/2))
+from typing import List
+from hand_detector import HandDetector
+from paddle import Paddle
+from ball import Ball
 
 class Game:
     def __init__(self):
@@ -123,7 +73,3 @@ class Game:
             
         pygame.quit()
         self.hand_detector.release()
-
-if __name__ == "__main__":
-    game = Game()
-    game.run()
