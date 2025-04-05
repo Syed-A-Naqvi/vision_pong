@@ -4,9 +4,9 @@ import threading
 import time
 
 class HandDetector:
-    def __init__(self, mdoel_name: str, model_path: str):
+    def __init__(self, model_name: str, model_path: str):
         
-        self.name = name
+        self.name = model_name
         self._lock = threading.Lock()
         self._running = True
 
