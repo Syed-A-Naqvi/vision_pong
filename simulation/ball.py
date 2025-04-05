@@ -1,23 +1,16 @@
-from typing import Tuple
-
 class Ball:
-    def __init__(self, x: float, y: float, velocity: Tuple[float, float]):
+    def __init__(self, x: float, y: float, velocity: list[float, float], DT: float):
+        self.original_x = x
+        self.original_y = y
+        self.original_velocity = velocity
         self.x = x
         self.y = y
         self.velocity = velocity
         self.radius = 10
+        self.DT = DT
         
-    def update(self, screen_width: int, screen_height: int) -> bool:
+    def update(self):
         # Update position based on velocity
-        self.x += self.velocity[0]
-        self.y += self.velocity[1]
+        self.x += self.velocity[0] * self.DT
+        self.y += self.velocity[1] * self.DT
         
-        # Handle collisions with walls
-        if self.x - self.radius <= 0 or self.x + self.radius >= screen_width:
-            self.velocity = (-self.velocity[0], self.velocity[1])
-            
-        if self.y - self.radius <= 0:
-            self.velocity = (self.velocity[0], -self.velocity[1])
-            
-        # Check if ball fell off screen
-        return self.y <= screen_height

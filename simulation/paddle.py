@@ -5,6 +5,9 @@ class Paddle:
         self.width = width
         self.height = height
         
-    def update(self, hand_x: float, screen_width: int):
+    def update(self, hand_y_norm: float, screen_height: int):
+        
+        y = (hand_y_norm * screen_height) - (self.height/2)
+        
         # Update paddle position based on hand position
-        self.x = max(0, min(screen_width - self.width, hand_x - self.width/2))
+        self.y = max(0, min(screen_height - self.height, y))
