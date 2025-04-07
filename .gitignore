@@ -2,3 +2,5 @@ venv-yolo/
 model_training/datasets/
 model_training/egohands_data/
 venv-visionPong/
+sim_report/
+vision_report/
