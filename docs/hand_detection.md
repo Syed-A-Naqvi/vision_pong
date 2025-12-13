@@ -6,7 +6,7 @@ This document covers the computer vision pipeline for real-time hand tracking.
 
 ## Overview
 
-The hand detection system uses a fine-tuned YOLO11n model to detect hands in webcam frames. Detected hand positions are normalized and passed to the game engine to control paddle movement.
+The hand detection system uses a fine-tuned YOLO11n model to detect hands in webcam frames. Detected hand positions are normalized in the y-axis and passed to the game engine to control paddle movement.
 
 ---
 
@@ -126,7 +126,7 @@ class HandDetector:
 
 | Decision | Rationale |
 |----------|-----------|
-| **Frame mirroring** | Natural mapping—move hand right, paddle moves right |
+| **Frame mirroring** | Natural mapping: player on right/left half of screen controls right/left paddle |
 | **Thread-safe access** | `threading.Lock()` prevents race conditions |
 | **Confidence threshold** | `conf=0.5` filters low-confidence detections |
 | **Normalized coordinates** | Resolution-independent paddle positioning |
@@ -139,11 +139,13 @@ Three models were trained and evaluated:
 
 | Model | Parameters | mAP50 | Inference (ms) |
 |-------|------------|-------|----------------|
-| YOLOv8s | 11.2M | High | ~12 |
-| YOLO11s | 9.4M | Higher | ~15 |
+| YOLO11s | 9.4M | Highest | ~15 |
+| YOLOv8s | 11.2M | Higher | ~12 |
 | **YOLO11n** | 2.6M | High | **~10** |
 
-**Selected**: YOLO11n for optimal speed-accuracy balance in real-time gaming.
+**Selected**: YOLO11n for best infrence compute requirements resulting lowest latency, optimal for real-time gaming.
+
+<img src='./mAP50.png' alt='mAP50 testing results for YOLO11n, YOLO11s and YOLOv8s' width='600'>
 
 ---
 

@@ -188,5 +188,5 @@ This project is for educational purposes.
 ---
 
 <p align="center">
-  <strong>Built with 🎮 and 🤖 by <a href="https://github.com/Syed-A-Naqvi">Syed Arham Naqvi</a></strong>
+  <strong>Built by <a href="https://github.com/Syed-A-Naqvi">Arham Naqvi</a></strong>
 </p>
