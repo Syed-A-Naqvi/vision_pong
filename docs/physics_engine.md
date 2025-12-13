@@ -7,8 +7,11 @@ This document covers the collision detection and ball dynamics system.
 ## Overview
 
 The physics engine handles:
+
 1. **Ball-wall collisions** – Boundary reflections
+
 2. **Ball-paddle collisions** – Player interactions
+
 3. **Ball-ball collisions** – Multi-ball dynamics with predictive detection
 
 ---
@@ -93,8 +96,11 @@ The `CollisionManager` implements **predictive collision detection** using analy
 ### Algorithm Overview
 
 1. **Predict collision times** for all ball pairs
+
 2. **Store events** in a min-heap (priority queue)
+
 3. **Process events** in chronological order
+
 4. **Apply elastic collision** response
 
 ### Collision Time Calculation
@@ -118,8 +124,11 @@ at^2 + bt + c = 0
 $$
 
 Where:
+
 - $a = |\mathbf{dv}|^2$
+
 - $b = 2(\mathbf{d} \cdot \mathbf{dv})$
+
 - $c = |\mathbf{d}|^2 - (r_1 + r_2)^2$
 
 ```python

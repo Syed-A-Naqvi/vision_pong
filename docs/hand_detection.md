@@ -18,8 +18,11 @@ The hand detection system uses a fine-tuned YOLO11n model to detect hands in web
 **Output**: Bounding box coordinates + confidence score
 
 ### Why YOLO11n?
+
 - Optimized for real-time inference (~10ms per frame)
+
 - Small model size with minimal accuracy trade-off
+
 - Native GPU acceleration via PyTorch/CUDA
 
 ---
@@ -41,10 +44,12 @@ The dataset contains first-person video frames from Google Glass recordings of p
 ### Data Preprocessing
 
 1. **Polygon → Bounding Box**: Original segmentation masks converted to YOLO-format bounding boxes
+
 2. **Normalization**: Coordinates normalized to `[0, 1]` range
+
 3. **Format**: `class_id x_center y_center width height`
 
-```
+```{md}
 # Example annotation (hand.txt)
 0 0.523438 0.412500 0.156250 0.225000
 0 0.734375 0.687500 0.187500 0.250000

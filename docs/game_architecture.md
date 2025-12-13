@@ -8,24 +8,24 @@ This document covers the multithreaded design and game loop structure.
 
 The game uses a **two-thread architecture** to decouple computer vision from game rendering:
 
-```
+```{md}
 ┌─────────────────────────────────────────────────────────┐
 │                      Main Thread                        │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐ │
-│  │  Game Loop  │───▶│   Update    │───▶│   Render    │ │
-│  │   (60 FPS)  │    │   Physics   │    │   Pygame    │ │
-│  └─────────────┘    └─────────────┘    └─────────────┘ │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
+│  │  Game Loop  │───▶│   Update    │───▶│   Render    │  │
+│  │   (60 FPS)  │    │   Physics   │    │   Pygame    │  │
+│  └─────────────┘    └─────────────┘    └─────────────┘  │
 │         ▲                                               │
 │         │ read normalized y-coords                      │
 │         │                                               │
-│  ┌──────┴──────────────────────────────────────────┐   │
-│  │              Thread-Safe Interface               │   │
-│  └──────────────────────────────────────────────────┘   │
+│  ┌──────┴──────────────────────────────────────────┐    │
+│  │              Thread-Safe Interface              │    │
+│  └─────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────┘
                           ▲
                           │
 ┌─────────────────────────┴───────────────────────────────┐
-│                    Detector Thread                       │
+│                    Detector Thread                      │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
 │  │   Webcam    │───▶│   YOLO      │───▶│   Update    │  │
 │  │   Capture   │    │  Inference  │    │  Positions  │  │
@@ -110,8 +110,11 @@ def run(self):
 ### Update Phase
 
 The update phase handles:
+
 1. **Paddle positions** – Read from detector thread
+
 2. **Ball physics** – Wall/paddle/ball collisions
+
 3. **Scoring** – Boundary exits
 
 ```python
@@ -200,10 +203,15 @@ Visual indicator shows buffer zone with red lines.
 ### Draw Order
 
 1. Clear screen (black background)
+
 2. Draw paddles (white rectangles)
+
 3. Draw balls (white circles)
+
 4. Draw center line (dotted)
+
 5. Draw buffer zone lines (if active)
+
 6. Draw UI (title, scores)
 
 ```python
@@ -243,7 +251,7 @@ finally:
 
 ## Game Flow
 
-```
+```{md}
 ┌─────────────┐
 │    Start    │
 └──────┬──────┘

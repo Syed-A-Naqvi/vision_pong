@@ -1,6 +1,6 @@
-# 🎮 Air Paddle
+# 🎮 Vision Pong
 
-**Real-Time Hand-Controlled Pong Using Computer Vision**
+**Real-Time Gesture-Controlled Pong Using Computer Vision**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)](https://github.com/ultralytics/ultralytics)
@@ -11,11 +11,14 @@
 
 ## 🎯 Overview
 
-Air Paddle transforms the classic Pong game into an immersive experience by replacing keyboard controls with **real-time hand tracking**. Using a fine-tuned YOLO model and your webcam, simply move your hands to control the paddles.
+Vision Pong transforms the classic Pong game into an immersive experience by replacing keyboard controls with **real-time hand tracking**. Using a fine-tuned YOLO model and your webcam, simply move your hands to control the paddles.
 
 The system combines:
+
 - **Computer Vision**: Custom-trained YOLO11n for robust hand detection
+
 - **Physics Simulation**: Event-driven collision detection with elastic ball dynamics
+
 - **Multithreading**: Parallel vision and game loops for low-latency gameplay
 
 ---
@@ -55,11 +58,12 @@ Uncomment and replace with actual video path:
 
 ## 🏗️ Architecture
 
-```
+```{md}
 ┌─────────────────────┐     ┌─────────────────────┐
 │   Webcam Feed       │────▶│   Hand Detector     │
 │   (OpenCV)          │     │   (YOLO11n)         │
 └─────────────────────┘     └──────────┬──────────┘
+                                       │
                                        │ normalized y-coords
                                        ▼
 ┌─────────────────────┐     ┌─────────────────────┐
@@ -84,8 +88,11 @@ Uncomment and replace with actual video path:
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Python 3.8+
+
 - Webcam
+
 - CUDA-capable GPU *(recommended)*
 
 ### Installation
@@ -103,6 +110,7 @@ python simulation/main.py
 ```
 
 ### Controls
+
 | Action | Input |
 |--------|-------|
 | Move Player 1 paddle | Left-side hand (vertical movement) |
@@ -114,7 +122,7 @@ python simulation/main.py
 
 ## 📁 Project Structure
 
-```
+```{md}
 air_paddle/
 ├── simulation/           # Game source code
 │   ├── main.py          # Entry point
@@ -182,7 +190,4 @@ This project is for educational purposes.
 
 <p align="center">
   <strong>Built with 🎮 and 🤖 by <a href="https://github.com/Syed-A-Naqvi">Syed Arham Naqvi</a></strong>
-</p> 
-
-   
-
+</p>
