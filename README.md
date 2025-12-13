@@ -60,16 +60,15 @@ Uncomment and replace with actual video path:
 
 ```{md}
 ┌─────────────────────┐     ┌─────────────────────┐
-│   Webcam Feed       │────▶│   Hand Detector     │
+│   Webcam Feed       │────▶   Hand Detector     │
 │   (OpenCV)          │     │   (YOLO11n)         │
 └─────────────────────┘     └──────────┬──────────┘
                                        │
-                                       │ normalized y-coords
-                                       ▼
-┌─────────────────────┐     ┌─────────────────────┐
-│   Collision Manager │◀───▶│   Game Engine       │
-│   (Physics)         │     │   (Pygame)          │
-└─────────────────────┘     └─────────────────────┘
+                                       │  normalized y-coords
+┌─────────────────────┐      ┌──────── ▼ ──────────┐
+│   Collision Manager │◀──▶│   Game Engine       │
+│   (Physics)         │      │   (Pygame)          │
+└─────────────────────┘      └─────────────────────┘
 ```
 
 ---
