@@ -25,22 +25,7 @@ The system combines:
 
 ## 🎬 Demo
 
-<!-- TODO: Add gameplay demo video -->
-<p align="center">
-  <em>🎥 Gameplay Demo Coming Soon</em>
-</p>
-
-<!-- 
-Uncomment and replace with actual video path:
-<p align="center">
-  <video src="assets/demo_gameplay.mp4" width="700" controls></video>
-</p>
--->
-
-<!-- TODO: Add hand detection demo -->
-<p align="center">
-  <em>🖐️ Hand Detection Demo Coming Soon</em>
-</p>
+<img src='./source/docs/game_demo.gif' alt='Gameplay Demo' width='600'>
 
 ---
 

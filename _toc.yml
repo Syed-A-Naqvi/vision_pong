@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+
+chapters:
+  # ========================================
+  # Add your project chapters below
+  # ========================================
+  - file: source/docs/game_architecture
+  - file: source/docs/hand_detection
+  - file: source/docs/physics_engine

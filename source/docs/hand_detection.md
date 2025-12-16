@@ -151,35 +151,6 @@ Three models were trained and evaluated:
 
 ## Demo
 
-<!-- TODO: Add hand detection visualization -->
-<p align="center">
-  <em>🖐️ Detection Visualization Coming Soon</em>
-</p>
-
-<!-- 
-Uncomment when video is available:
-<p align="center">
-  <video src="../assets/hand_detection_demo.mp4" width="600" controls></video>
-</p>
--->
+<img src='./detection_demo.gif' alt='Hand Detection Demo' width='600'>
 
 ---
-
-## References
-
-```bibtex
-@InProceedings{Bambach_2015_ICCV,
-  author = {Bambach, Sven and Lee, Stefan and Crandall, David J. and Yu, Chen},
-  title = {Lending A Hand: Detecting Hands and Recognizing Activities 
-           in Complex Egocentric Interactions},
-  booktitle = {IEEE International Conference on Computer Vision (ICCV)},
-  year = {2015}
-}
-
-@software{yolo11_ultralytics,
-  author = {Glenn Jocher and Jing Qiu},
-  title = {Ultralytics YOLO11},
-  year = {2024},
-  url = {https://github.com/ultralytics/ultralytics}
-}
-```

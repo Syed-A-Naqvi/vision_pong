@@ -1,6 +1,7 @@
-venv-yolo/
-model_training/datasets/
-model_training/egohands_data/
+source/model_training/datasets/
+source/model_training/egohands_data/
 venv-visionPong/
 sim_report/
 vision_report/
+_build
+conf.py

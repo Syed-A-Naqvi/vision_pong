@@ -10,7 +10,8 @@ class HandDetector:
         self._lock = threading.Lock()
         self._running = True
 
-        self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        # self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        self.cap = cv2.VideoCapture(0)
         self.model = YOLO(model_path)
         self.model_path = model_path
         
@@ -76,3 +77,7 @@ class HandDetector:
         if self.cap.isOpened():
             self.cap.release()
         cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    detection = HandDetector(model_path='./model_training/runs/detect/hand_detection_11n/weights/best.pt', model_name="yolo11n")
+    detection.detect_hands()

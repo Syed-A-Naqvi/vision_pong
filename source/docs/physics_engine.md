@@ -252,14 +252,4 @@ For typical gameplay (4-10 balls), event-driven approach provides optimal perfor
 
 ## Demo
 
-<!-- TODO: Add physics demo video showing ball-ball collisions -->
-<p align="center">
-  <em>🎱 Ball Collision Demo Coming Soon</em>
-</p>
-
-<!-- 
-Uncomment when video is available:
-<p align="center">
-  <video src="../assets/physics_demo.mp4" width="600" controls></video>
-</p>
--->
+<img src='./collision_demo.gif' alt='Collisions Demo' width='600'>

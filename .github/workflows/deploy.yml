@@ -1,0 +1,116 @@
+# This workflow runs when you push to the main branch.
+name: Deploy Jupyter Book
+
+# Controls when the action will run.
+on:
+  push:
+    branches:
+      - main # Set this to your book's primary branch
+
+# Sets permissions for the GITHUB_TOKEN to allow deployment to GitHub Pages.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel.
+jobs:
+
+  # The 'build' job creates the HTML version of your book.
+  build:
+    # The type of runner that the job will run on.
+    runs-on: ubuntu-latest
+
+    # The steps that the build job will run.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r book_requirements.txt
+          pip install -r scripts/script_requirements.txt
+          
+      - name: Update README.md header
+        run: |
+          # Execute Python script to update landing page README header
+          python scripts/update-header.py
+
+      - name: Commit header update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: README header [skip ci]"
+          git push
+
+      - name: Build the book
+        run: |
+          jupyter-book build .
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          # The directory to upload the artifact from
+          path: _build/html
+
+  # The 'deploy' job publishes the book to GitHub Pages.
+  deploy:
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+  
+    runs-on: ubuntu-latest
+  
+    needs: build
+  
+    # Declare the output variable for this job
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+  
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+    
+      - name: testing deployment url
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
+
+  # Executes python script to send metadata to portfolio after project deployment
+  notify-portfolio:
+
+    runs-on: ubuntu-latest
+  
+    needs: deploy
+  
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/script_requirements.txt
+      
+      - name: Send metadata to portfolio
+        env:
+          PORTFOLIO_REPO: ${{ vars.PORTFOLIO_REPO }}
+          PORTFOLIO_PAT: ${{ secrets.PORTFOLIO_PAT }}
+        run: |
+          python scripts/send-metadata.py ${{ needs.deploy.outputs.page_url }}

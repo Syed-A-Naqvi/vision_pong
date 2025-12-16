@@ -1,0 +1,303 @@
+/* ========================================
+   LIGHT MODE - Warm & Sophisticated
+   ======================================== */
+html:not([data-theme]),
+html[data-theme="light"] {
+    /* Primary Colors */
+    --pst-color-primary: #8B1C31;              /* Deep Burgundy Red - Primary actions */
+    --pst-color-primary-bg: #c59499;           /* Light burgundy background */
+    --pst-color-primary-text: #FAF7F2;         /* Light text on primary */
+    --pst-color-primary-highlight: #6B1525;    /* Darker burgundy for hover */
+    
+    /* Secondary Colors */
+    --pst-color-secondary: #D4A574;            /* Rich Gold - Secondary actions */
+    --pst-color-secondary-bg: #F8E3D0;         /* Light gold background */
+    --pst-color-secondary-text: #2A1F16;       /* Dark text on secondary */
+    
+    /* Accent */
+    --pst-color-accent: #8B7355;               /* Warm Brown - Accents/focus */
+    --pst-color-accent-bg: #E8DDD0;            /* Light warm beige */
+    
+    /* Backgrounds */
+    --pst-color-background: #F0EBE3;           /* Warm Cream - Main background */
+    --pst-color-on-background: #E8DDD0;        /* Light Warm Grey - Cards/panels */
+    --pst-color-surface: #E8DDD0;              /* Light Warm Grey - Surfaces */
+    --pst-color-panel-background: #E8DDD0;     /* Light Warm Grey - Panels */
+    --pst-color-on-surface: #3D3126;           /* Deep Charcoal Brown - Text on surface */
+    
+    /* Text Colors */
+    --pst-color-text-base: #3D3126;            /* Deep Charcoal Brown - Body text */
+    --pst-color-text-muted: #6B5D4F;           /* Medium Warm Brown - Secondary text */
+    --pst-heading-color: #2A1F16;              /* Rich Dark Brown - Headings */
+    --pst-color-text-heading: #2A1F16;         /* Rich Dark Brown - Heading emphasis */
+    
+    /* Borders & Shadows */
+    --pst-color-border: #BFA892;               /* Lightened warm brown, harmonized with #8B7562 */
+    --pst-color-border-muted: rgba(191, 168, 146, 0.10);  /* Muted, lighter version of #BFA892 */
+    --pst-color-shadow: rgba(61, 49, 38, 0.15);
+    
+    /* Links */
+    --pst-color-link: #8B1C31;                 /* Deep Burgundy Red */
+    --pst-color-link-hover: #D4A574;           /* Rich Gold on hover */
+    
+    /* Semantic Colors - More vibrant and conventional */
+    --pst-color-info: #3498db;                 /* Bright Blue - Info */
+        --pst-color-info-bg: #b3d8fa;           /* More saturated blue background */
+    --pst-color-warning: #f39c12;              /* Vibrant Orange - Warning */
+        --pst-color-warning-bg: #ffd180;        /* Deeper orange background */
+    --pst-color-warning-text: #2A1F16;
+    --pst-color-success: #27ae60;              /* Green - Success */
+        --pst-color-success-bg: #a5d6a7;        /* Deeper green background */
+    --pst-color-danger: #8B1C31;               /* Deep Burgundy Red - Danger */
+        --pst-color-danger-bg: #f48fb1;         /* Deeper pink/red background */
+    --pst-color-danger-text: #FAF7F2;
+    --pst-color-attention: #f39c12;            /* Vibrant Orange */
+        --pst-color-attention-bg: #ffd180;      /* Deeper orange background */
+    
+    /* Code & Inline Elements */
+    --pst-color-inline-code: #8B1C31;          /* Deep Burgundy */
+    --pst-color-inline-code-links: #8B7355;    /* Warm Brown */
+    --pst-color-blockquote-notch: #D4A574;     /* Rich Gold */
+    
+    /* Tables */
+    --pst-color-table: #3D3126;
+    --pst-color-table-outer-border: #E8DDD0;
+    --pst-color-table-inner-border: #E8DDD0;
+    --pst-color-table-heading-bg: #F0EBE3;
+    --pst-color-table-row-zebra-high-bg: #FAF7F2;
+    --pst-color-table-row-zebra-low-bg: #F0EBE3;
+    --pst-color-table-row-hover-bg: #F8E3D0;
+    
+    /* Target/Highlight */
+    --pst-color-target: #F8E3D0;               /* Warm beige highlight */
+    
+    /* Muted */
+    --pst-color-muted: #6B5D4F;
+    
+    /* Sphinx Design (sd) Colors - Light Mode */
+    --sd-color-primary: #8B1C31;
+    --sd-color-primary-text: #FAF7F2;
+    --sd-color-primary-highlight: #6B1525;
+    --sd-color-primary-bg: #F9E1E4;
+    --sd-color-primary-bg-text: #2A1F16;
+    
+    --sd-color-secondary: #D4A574;
+    --sd-color-secondary-text: #2A1F16;
+    --sd-color-secondary-highlight: #B8875E;
+    --sd-color-secondary-bg: #F8E3D0;
+    --sd-color-secondary-bg-text: #2A1F16;
+    
+    --sd-color-success: #27ae60;
+    --sd-color-success-text: #FFFFFF;
+    --sd-color-success-highlight: #1e8449;
+    --sd-color-success-bg: #e8f5e9;
+    --sd-color-success-bg-text: #1e8449;
+    
+    --sd-color-info: #3498db;
+    --sd-color-info-text: #FFFFFF;
+    --sd-color-info-highlight: #2980b9;
+    --sd-color-info-bg: #e3f2fd;
+    --sd-color-info-bg-text: #2980b9;
+    
+    --sd-color-warning: #f39c12;
+    --sd-color-warning-text: #2A1F16;
+    --sd-color-warning-highlight: #d68910;
+    --sd-color-warning-bg: #fff3e0;
+    --sd-color-warning-bg-text: #2A1F16;
+    
+    --sd-color-danger: #8B1C31;
+    --sd-color-danger-text: #FAF7F2;
+    --sd-color-danger-highlight: #6B1525;
+    --sd-color-danger-bg: #F9E1E4;
+    --sd-color-danger-bg-text: #6B1525;
+    
+    --sd-color-light: #E8DDD0;
+    --sd-color-light-text: #2A1F16;
+    --sd-color-light-highlight: #D4C9BC;
+    --sd-color-light-bg: #E8DDD0;
+    --sd-color-light-bg-text: #2A1F16;
+    
+    --sd-color-muted: #6B5D4F;
+    --sd-color-muted-text: #FAF7F2;
+    --sd-color-muted-highlight: #4A3F34;
+    --sd-color-muted-bg: #6B5D4F;
+    --sd-color-muted-bg-text: #FAF7F2;
+    
+    --sd-color-dark: #3D3126;
+    --sd-color-dark-text: #FAF7F2;
+    --sd-color-dark-highlight: #2A1F16;
+    --sd-color-dark-bg: #3D3126;
+    --sd-color-dark-bg-text: #FAF7F2;
+    
+    --sd-color-black: #2A1F16;
+    --sd-color-black-text: #FAF7F2;
+    --sd-color-black-highlight: #1A1410;
+    --sd-color-black-bg: #2A1F16;
+    --sd-color-black-bg-text: #FAF7F2;
+    
+    --sd-color-white: #FAF7F2;
+    --sd-color-white-text: #2A1F16;
+    --sd-color-white-highlight: #E8DDD0;
+    --sd-color-white-bg: #FAF7F2;
+    --sd-color-white-bg-text: #2A1F16;
+    
+    --sd-color-card-border: var(--pst-color-border);
+}
+
+/* ========================================
+   DARK MODE - Deep & Dramatic with Warm Hints
+   ======================================== */
+html[data-theme="dark"] {
+    /* Primary Colors */
+    --pst-color-primary: #C4A878;              /* Muted Warm Gold - Primary actions */
+    --pst-color-primary-bg: #4d3a29;           /* Charcoal Brown background */
+    --pst-color-primary-text: #181410;         /* Deep background for text */
+    --pst-color-primary-highlight: #A08A60;    /* Darker gold for hover */
+    
+    /* Secondary Colors */
+    --pst-color-secondary: #C94857;            /* Brighter Red - Secondary & hover states */
+    --pst-color-secondary-bg: #2d1a1e;         /* Dark red background */
+    --pst-color-secondary-text: #D8D3C8;       /* Warm Off-White text */
+    
+    /* Accent */
+    --pst-color-accent: #C94857;               /* Brighter Red - Focus/accents */
+    --pst-color-accent-bg: #2d1a1e;            /* Dark red background */
+    
+    /* Backgrounds */
+    --pst-color-background: #211B16;           /* Deep Charcoal Brown - Main background */
+    --pst-color-on-background: #28221D;        /* Soft Charcoal Brown - Cards/panels */
+    --pst-color-surface: #28221D;              /* Soft Charcoal Brown - Surfaces */
+    --pst-color-panel-background: #28221D;     /* Soft Charcoal Brown - Panels */
+    --pst-color-on-surface: #C4BFB4;           /* Soft Warm Taupe - Text on surface */
+    
+    /* Text Colors */
+    --pst-color-text-base: #C4BFB4;            /* Soft Warm Taupe - Body text */
+    --pst-color-text-muted: #A69B8E;           /* Medium Warm Grey - Secondary text */
+    --pst-heading-color: #D8D3C8;              /* Warm Off-White - Headings */
+    --pst-color-text-heading: #D8D3C8;         /* Warm Off-White - Heading emphasis */
+    
+    /* Borders & Shadows */
+    --pst-color-border: #3A2F25;               /* Charcoal Brown - Dividers */
+    --pst-color-border-muted: rgba(58, 47, 37, 0.10);  /* Muted, lighter version of #3A2F25 */
+    --pst-color-shadow: rgba(0, 0, 0, 0.4);
+    
+    /* Links */
+    --pst-color-link: #C4A878;                 /* Muted Warm Gold */
+    --pst-color-link-hover: #C94857;           /* Brighter Red on hover */
+    
+    /* Semantic Colors - More vibrant and conventional */
+    --pst-color-info: #5dade2;                 /* Lighter Blue - Info */
+    --pst-color-info-bg: #1a2332;
+    --pst-color-warning: #f39c12;              /* Vibrant Orange - Warning */
+    --pst-color-warning-bg: #2d2416;
+    --pst-color-warning-text: #D8D3C8;
+    --pst-color-success: #52c77a;              /* Lighter Green - Success */
+    --pst-color-success-bg: #1a2b1f;
+    --pst-color-danger: #C94857;               /* Brighter Red - Danger */
+    --pst-color-danger-bg: #2d1a1e;
+    --pst-color-danger-text: #D8D3C8;
+    --pst-color-attention: #f39c12;            /* Vibrant Orange */
+    --pst-color-attention-bg: #2d2416;
+    
+    /* Code & Inline Elements */
+    --pst-color-inline-code: #C4A878;          /* Muted Warm Gold */
+    --pst-color-inline-code-links: #8B7562;    /* Muted Warm Brown */
+    --pst-color-blockquote-notch: #8B7562;     /* Muted Warm Brown */
+    
+    /* Tables */
+    --pst-color-table: #C4BFB4;
+    --pst-color-table-outer-border: #28221D;
+    --pst-color-table-inner-border: #28221D;
+    --pst-color-table-heading-bg: #211B16;
+    --pst-color-table-row-zebra-high-bg: #181410;
+    --pst-color-table-row-zebra-low-bg: #211B16;
+    --pst-color-table-row-hover-bg: #28221D;
+    
+    /* Target/Highlight */
+    --pst-color-target: #28221D;               /* Charcoal brown highlight */
+    
+    /* Muted */
+    --pst-color-muted: #A69B8E;
+    
+    /* Sphinx Design (sd) Colors - Dark Mode */
+    --sd-color-primary: #C4A878;
+    --sd-color-primary-text: #181410;
+    --sd-color-primary-highlight: #A08A60;
+    --sd-color-primary-bg: #28221D;
+    --sd-color-primary-bg-text: #D8D3C8;
+    
+    --sd-color-secondary: #C94857;
+    --sd-color-secondary-text: #181410;
+    --sd-color-secondary-highlight: #a73543;
+    --sd-color-secondary-bg: #2d1a1e;
+    --sd-color-secondary-bg-text: #D8D3C8;
+    
+    --sd-color-success: #52c77a;
+    --sd-color-success-text: #181410;
+    --sd-color-success-highlight: #3fa562;
+    --sd-color-success-bg: #1a2b1f;
+    --sd-color-success-bg-text: #D8D3C8;
+    
+    --sd-color-info: #5dade2;
+    --sd-color-info-text: #181410;
+    --sd-color-info-highlight: #3e8cc1;
+    --sd-color-info-bg: #1a2332;
+    --sd-color-info-bg-text: #D8D3C8;
+    
+    --sd-color-warning: #f39c12;
+    --sd-color-warning-text: #181410;
+    --sd-color-warning-highlight: #d68910;
+    --sd-color-warning-bg: #2d2416;
+    --sd-color-warning-bg-text: #D8D3C8;
+    
+    --sd-color-danger: #C94857;
+    --sd-color-danger-text: #181410;
+    --sd-color-danger-highlight: #a73543;
+    --sd-color-danger-bg: #2d1a1e;
+    --sd-color-danger-bg-text: #D8D3C8;
+    
+    --sd-color-light: #28221D;
+    --sd-color-light-text: #D8D3C8;
+    --sd-color-light-highlight: #1a1612;
+    --sd-color-light-bg: #28221D;
+    --sd-color-light-bg-text: #D8D3C8;
+    
+    --sd-color-muted: #A69B8E;
+    --sd-color-muted-text: #181410;
+    --sd-color-muted-highlight: #8B7E72;
+    --sd-color-muted-bg: #A69B8E;
+    --sd-color-muted-bg-text: #181410;
+    
+    --sd-color-dark: #211B16;
+    --sd-color-dark-text: #D8D3C8;
+    --sd-color-dark-highlight: #181410;
+    --sd-color-dark-bg: #211B16;
+    --sd-color-dark-bg-text: #D8D3C8;
+    
+    --sd-color-black: #181410;
+    --sd-color-black-text: #D8D3C8;
+    --sd-color-black-highlight: #0a0805;
+    --sd-color-black-bg: #181410;
+    --sd-color-black-bg-text: #D8D3C8;
+    
+    --sd-color-white: #D8D3C8;
+    --sd-color-white-text: #181410;
+    --sd-color-white-highlight: #C4BFB4;
+    --sd-color-white-bg: #D8D3C8;
+    --sd-color-white-bg-text: #181410;
+    
+    --sd-color-card-border: var(--pst-color-border);
+}
+
+.sd-card-header.bg-primary {
+    background-color: var(--pst-color-primary-bg) !important;
+    color: var(--pst-color-text-heading) !important;
+}
+
+/* ========================================
+   HR DIVIDER FIX FOR IFRAME
+   ======================================== */
+/* Override low-contrast hr borders to ensure visibility */
+hr.docutils {
+    opacity: 0.75 !important;
+}
