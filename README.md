@@ -8,6 +8,11 @@
 
 ---
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)](https://github.com/ultralytics/ultralytics)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red.svg)](https://opencv.org)
+[![Pygame](https://img.shields.io/badge/Pygame-2.x-yellow.svg)](https://pygame.org)
+
 ## 🎯 Overview
 
 Vision Pong transforms the classic Pong game into an immersive experience by replacing keyboard controls with **real-time hand tracking**. Using a fine-tuned YOLO model and your webcam, simply move your hands to control the paddles.
@@ -42,7 +47,7 @@ The system combines:
 
 ## 🏗️ Architecture
 
-```{md}
+```python
 ┌─────────────────────┐     ┌─────────────────────┐
 │   Webcam Feed       │────▶   Hand Detector     │
 │   (OpenCV)          │     │   (YOLO11n)         │

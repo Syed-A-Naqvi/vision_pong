@@ -8,7 +8,7 @@ This document covers the multithreaded design and game loop structure.
 
 The game uses a **two-thread architecture** to decouple vision-based hand detection from game rendering:
 
-```{md}
+```python
 ┌───────────────────────────────────────────────┐
 │         Main Game Loop Thread (60 FPS)        │
 │                                               │
@@ -91,6 +91,8 @@ def run(self):
     FPS = 60
     DT = 1/FPS
     
+---
+
     while running:
         # 1. Handle events
         for event in pygame.event.get():
@@ -216,7 +218,9 @@ Visual indicator shows buffer zone with red lines.
 
 ```python
 # Paddles
-pygame.draw.rect(screen, WHITE, (paddle.x, paddle.y, paddle.width, paddle.height))
+pygame.draw.rect(screen, WHITE, (paddle.x, paddle.y, pa
+---
+ddle.width, paddle.height))
 
 # Balls
 pygame.draw.circle(screen, WHITE, (int(ball.x), int(ball.y)), ball.radius)
@@ -251,7 +255,7 @@ finally:
 
 ## Game Flow
 
-```{md}
+```python
 ┌─────────────┐
 │    Start    │
 └──────┬──────┘

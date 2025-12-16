@@ -16,6 +16,12 @@ The physics engine handles:
 
 ---
 
+## Demo
+
+<img src='../../_static/collision_demo.gif' alt='Collisions Demo' width='600'>
+
+---
+
 ## Ball Dynamics
 
 ### Ball Entity
@@ -247,9 +253,3 @@ def process_collisions(self, dt):
 | Spatial partitioning | O(n log n) | Overkill for small n |
 
 For typical gameplay (4-10 balls), event-driven approach provides optimal performance.
-
----
-
-## Demo
-
-<img src='../../_static/collision_demo.gif' alt='Collisions Demo' width='600'>

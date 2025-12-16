@@ -10,6 +10,12 @@ The hand detection system uses a fine-tuned YOLO11n model to detect hands in web
 
 ---
 
+## Demo
+
+<img src='../../_static/detection_demo.gif' alt='Hand Detection Demo' width='600'>
+
+---
+
 ## Model Architecture
 
 **Base Model**: YOLO11n (nano variant)  
@@ -49,7 +55,7 @@ The dataset contains first-person video frames from Google Glass recordings of p
 
 3. **Format**: `class_id x_center y_center width height`
 
-```{md}
+```markdown
 # Example annotation (hand.txt)
 0 0.523438 0.412500 0.156250 0.225000
 0 0.734375 0.687500 0.187500 0.250000
@@ -145,12 +151,4 @@ Three models were trained and evaluated:
 
 **Selected**: YOLO11n for best infrence compute requirements resulting lowest latency, optimal for real-time gaming.
 
-<img src='./mAP50.png' alt='mAP50 testing results for YOLO11n, YOLO11s and YOLOv8s' width='600'>
-
----
-
-## Demo
-
-<img src='../../_static/detection_demo.gif' alt='Hand Detection Demo' width='600'>
-
----
+<img src='../../_static/mAP50.png' alt='mAP50 testing results for YOLO11n, YOLO11s and YOLOv8s' width='600'>
