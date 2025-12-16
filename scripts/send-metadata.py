@@ -47,7 +47,7 @@ def extract_metadata(config: dict[str, Any], deployed_url: str) -> dict[str, str
     tags = project_meta.get("tags", [])
     
     # Get current date
-    current_date = datetime.now().strftime("%Y-%m-%d")
+    current_date = datetime.now().isoformat()
     
     return {
         "title": title,
