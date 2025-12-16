@@ -1,11 +1,10 @@
-# 🎮 Vision Pong
+# Vision Pong
 
-**Real-Time Gesture-Controlled Pong Using Computer Vision**
+**An interactive spin on the popular Pong game that uses computer vision hand tracking to control the game paddles.**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)](https://github.com/ultralytics/ultralytics)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red.svg)](https://opencv.org)
-[![Pygame](https://img.shields.io/badge/Pygame-2.x-yellow.svg)](https://pygame.org)
+*Author: Arham Naqvi*
+
+*Last Updated: December 16th, 2025*
 
 ---
 
