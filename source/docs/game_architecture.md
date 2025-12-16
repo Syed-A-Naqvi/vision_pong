@@ -218,9 +218,7 @@ Visual indicator shows buffer zone with red lines.
 
 ```python
 # Paddles
-pygame.draw.rect(screen, WHITE, (paddle.x, paddle.y, pa
----
-ddle.width, paddle.height))
+pygame.draw.rect(screen, WHITE, (paddle.x, paddle.y, paddle.width, paddle.height))
 
 # Balls
 pygame.draw.circle(screen, WHITE, (int(ball.x), int(ball.y)), ball.radius)

@@ -87,8 +87,8 @@ The system combines:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Syed-A-Naqvi/air_paddle.git
-cd air_paddle
+git clone https://github.com/Syed-A-Naqvi/vision_pong.git
+cd vision_pong
 
 # Install dependencies
 pip install -r requirements.txt
@@ -110,8 +110,8 @@ python simulation/main.py
 
 ## 📁 Project Structure
 
-```{md}
-air_paddle/
+```markdown
+vision_pong/
 ├── simulation/           # Game source code
 │   ├── main.py          # Entry point
 │   ├── game.py          # Game loop and rendering
