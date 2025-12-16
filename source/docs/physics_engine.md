@@ -252,4 +252,4 @@ For typical gameplay (4-10 balls), event-driven approach provides optimal perfor
 
 ## Demo
 
-<img src='./collision_demo.gif' alt='Collisions Demo' width='600'>
+<img src='../../_static/collision_demo.gif' alt='Collisions Demo' width='600'>

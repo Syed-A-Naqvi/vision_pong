@@ -151,6 +151,6 @@ Three models were trained and evaluated:
 
 ## Demo
 
-<img src='./detection_demo.gif' alt='Hand Detection Demo' width='600'>
+<img src='../../_static/detection_demo.gif' alt='Hand Detection Demo' width='600'>
 
 ---

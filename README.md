@@ -25,7 +25,7 @@ The system combines:
 
 ## 🎬 Demo
 
-<img src='./source/docs/game_demo.gif' alt='Gameplay Demo' width='600'>
+<img src='./_static/game_demo.gif' alt='Gameplay Demo' width='600'>
 
 ---
 
