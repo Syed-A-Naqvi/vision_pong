@@ -21,7 +21,7 @@ The system combines:
 
 - **Computer Vision**: Custom-trained YOLO11n for robust hand detection
 
-- **Physics Simulation**: Event-driven collision detection with elastic ball dynamics
+- **Physics Simulation**: Event-driven collision detection with fully elastic collision dynamics
 
 - **Multithreading**: Parallel vision and game loops for low-latency gameplay
 
