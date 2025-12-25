@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 title: "Vision Pong"
-description: "An interactive spin on the popular Pong game that uses computer vision hand tracking to control the game paddles."
+description: "An interactive variation of the popular \"Pong\" game that tracks player hands using computer vision for paddle control."
 author: "Arham Naqvi"
 logo: "logo.png"
 copyright: "2025"
