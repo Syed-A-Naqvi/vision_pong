@@ -1,10 +1,10 @@
 # Vision Pong
 
-**An interactive spin on the popular Pong game that uses computer vision hand tracking to control the game paddles.**
+**An interactive variation of the popular "Pong" game that tracks player hands using computer vision for paddle control.**
 
 *Author: Arham Naqvi*
 
-*Last Updated: December 18th, 2025*
+*Last Updated: December 25th, 2025*
 
 ---
 
