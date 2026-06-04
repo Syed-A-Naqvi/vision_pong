@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 title: "Vision Pong"
 description: "An interactive variation of the popular \"Pong\" game that tracks player hands using computer vision for paddle control."
-author: "Arham Naqvi"
+author: "Raza Naqvi"
 logo: "logo.png"
 copyright: "2025"
 
@@ -34,7 +34,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Syed-A-Naqvi/vision_pong # repo url
+  url: https://github.com/raza-naq/vision_pong # repo url
   branch: main  # Which branch of the repository should be used when creating links (optional)
   # path_to_book: docs  # Optional path to your book, relative to the repository root
 
