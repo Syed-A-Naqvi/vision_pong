@@ -2,9 +2,9 @@
 
 **An interactive variation of the popular "Pong" game that tracks player hands using computer vision for paddle control.**
 
-*Author: Raza Naqvi*
+*Author: Arham Naqvi*
 
-*Last Updated: June 4th, 2026*
+*Last Updated: June 6th, 2026*
 
 ---
 
